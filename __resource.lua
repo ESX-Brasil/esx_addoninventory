@@ -2,7 +2,7 @@ resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
 description 'ESX Addon Inventory'
 
-version '1.1.0'
+version '1.1.2'
 
 server_scripts {
 	'@mysql-async/lib/MySQL.lua',
@@ -10,4 +10,7 @@ server_scripts {
 	'server/main.lua'
 }
 
-dependency 'es_extended'
+dependencies {
+	'mysql-async',
+	'es_extended'
+}

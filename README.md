@@ -1,42 +1,42 @@
 # esx_addoninventory
 
-## Download & Installation
+## Download e Instalação
 
-### Using [fvm](https://github.com/qlaffont/fvm-installer)
+### Usando [fvm](https://github.com/qlaffont/fvm-installer)
 ```
-fvm install --save --folder=esx esx-org/esx_addoninventory
+fvm install --save --folder=esx ESX-Brasil/esx_addoninventory
 ```
 
-### Using Git
+### Usando o Git
 ```
 cd resources
-git clone https://github.com/ESX-Org/esx_addoninventory [esx]/esx_addoninventory
+git clone https://github.com/ESX-Brasil/esx_addoninventory [esx]/esx_addoninventory
 ```
 
-### Manually
-- Download https://github.com/ESX-Org/esx_addoninventory/archive/master.zip
-- Put it in the `[esx]` directory
+### Manualmente
+- Download https://github.com/ESX-Brasil/esx_addoninventory/archive/master.zip
+- Coloque-o no diretório `[esx]`
 
-## Installation
-- Import `esx_addoninventory.sql` in your database
-- Add this in your `server.cfg`:
+## Instalação
+- Importar `esx_addoninventory.sql` em seu banco de dados
+- Adicione isto em seu `server.cfg`:
 
 ```
 start esx_addoninventory
 ```
 
-## Usage
-There are two types of inventories: shared and not shared.
+## Uso
+Existem dois tipos de inventários: compartilhados e não compartilhados.
 
-- Shared inventories dont belong to a specific user. Example: foodstore items.
-- None-shared inventories are created for every user in the server. They are created in db when player is loaded, Example: property items
+- Os inventários compartilhados não pertencem a um usuário específico. Exemplo: itens da loja de alimentos.
+- Inventários sem nenhum compartilhamento são criados para cada usuário no servidor. Eles são criados em db quando o player é carregado. Exemplo: itens de propriedade
 
-### `addon_inventory` database information
-An addon inventory must be configured in the database before using it. Don't forget to run a server restart afterwards (you can alternative restart the script and relog all clients)
+### `addon_inventory` informação do banco de dados
+Um inventário de addons deve ser configurado no banco de dados antes de usá-lo. Não esqueça de executar uma reinicialização do servidor depois (você pode alternativamente reiniciar o script e relogar todos os clientes)
 
-| `name`   | `label` | `shared` |
+| `nome`   | `rótulo` | `compartilhado` |
 | -------- | ------- | -------- |
-| name of the inventory | label of the inventory (not used) | is the inventory shared with others? (boolean either `0` or `1`) |
+| nome do inventário | rótulo da conta (não usado) | a conta é compartilhada com outras pessoas? (booleano ou `0` ou` 1`) |
 
 ```lua
 TriggerEvent('esx_addoninventory:getSharedInventory', 'society_police', function(inventory)
@@ -48,11 +48,12 @@ TriggerEvent('esx_addoninventory:getInventory', 'property', 'steam:0123456789', 
 end)
 
 ```
+
 # Legal
 ### License
 esx_addoninventory - inventories!
 
-Copyright (C) 2015-2018 Jérémie N'gadi
+Copyright (C) 2015-2019 Jérémie N'gadi
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 
