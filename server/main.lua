@@ -1,3 +1,5 @@
+--By ESX-Brasil
+
 local InventoriesIndex, Inventories, SharedInventories, Items = {}, {}, {}, {}
 ESX = nil
 

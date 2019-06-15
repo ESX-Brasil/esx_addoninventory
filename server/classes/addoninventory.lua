@@ -1,3 +1,5 @@
+--By ESX-Brasil
+
 function CreateAddonInventory(name, owner, items)
 	local self = {}
 
@@ -80,4 +82,3 @@ function CreateAddonInventory(name, owner, items)
 
 	return self
 end
-
